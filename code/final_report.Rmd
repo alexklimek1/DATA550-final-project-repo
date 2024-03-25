@@ -1,0 +1,55 @@
+---
+title: "DATA550 Final Project"
+author: "Alex Klimek"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: true
+---
+
+```{r, set-chunk-opts, echo=FALSE, warning=FALSE}
+library(knitr)
+opts_chunk$set(
+  echo=FALSE, warning = FALSE, message = FALSE
+)
+```
+
+```{r, load-data}
+here::i_am("code/final_report.Rmd")
+data <- readRDS(
+  file = here::here("output/data.rds")
+)
+```
+
+# Descriptive Analysis
+
+## Tabular Analysis
+
+Characteristics of the created data set on depression tests and PKD are displayed below. The created data set contains `r nrow(data)` rows and `r ncol(data)` columns. 
+
+```{r, table1}
+table_one <- readRDS(
+  file = here::here("output/table_one.rds")
+)
+table_one
+```
+
+### Table Discussion
+
+The table displayed shows the distribution of the demographic variables as well as other important PKD variables for the cohort separated by depression tests. Raw Score indicated the score of the depression test taken by each individual. This is longitudinal data so each individual has taken multiple depression tests as well as having multiple records of eGFR scores. Furthermore, patient gender, race, ethnicity, and age are included as demographic variables. Age at index date suggests the age of the patient when they took their first depression test. Number of eGFR suggests the number of eGFR measurements taken, and eGFR score suggests the value of the eGFR measurement at a specific time. Finally, alcohol abuse, cancer, diabetes, and obesity were included as co-morbidity variables and were binary with a score of 0 suggesting they did not have the co-morbidity, and 1 suggesting that the patient did have the co-morbidity. As this data set is a random sample generated in R, interpreting the values does not suggest anything meaningful.
+
+## Graphical analysis
+
+Below we report the distribution of four co-morbidity presence within the population.
+
+```{r, plot-data}
+#| fig.align = "center",
+#| out.width = "600px"
+knitr::include_graphics(
+  here::here("output/figure.png")
+)
+```
+
+### Figure Discussion
+
+The figure displays four bar charts showing the distribution and presence of the co-morbidities among the study population. Alcohol abuse, cancer, diabetes, and obesity were the four co-morbidities in the data set and their distribution in displayed. If the patient did have the co-morbidity then they were marked as 1, or "yes", and if they did not have the co-morbidity they were marked as 0, or "no". The co-morbidity presense stays consisted with time, so a patient would be marked as yes or no consistently throughout their measurements. Once again, this data set is a random sample generated in R, interpreting the values does not suggest anything meaningful.
