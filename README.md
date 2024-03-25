@@ -17,23 +17,23 @@ To clean the output after generating the report, run the command `make clean` in
 
 ## Code Description / Content
 
-Variables
-Variable  Type  Description
-- PatientICN	Integer		Unique sequence of numbers representing individual patient
-- SurveyName	Character	Depression test, has to be either PHQ9, PHQ-2, or PHQ-2+I9
-- RawScore	Integer		Score of depression survey taken (For a PHQ-2 and PHQ-2+I9 test must be between 0-6, for PHQ9 between 0-27)
-- CurrentAge	Integer		Age of patient currently
-- IndexAge	Integer		Age of patient when they took their first depression test
-- SurveyGivenDateTime	Date	Date of when the depression test was taken 
-- Gender		Character	Male or female
-- Race		Character	Patient race (White, Black or African American, Asian, American Indian or Alaska Native, Native Hawaiian or Other Pacific Islander, Unknown)
-- Ethnicity	Character	Patient ethnicity (Hispanic or Latino, Not Hispanic or Latino, Unknown)
-- Alcohol		Integer		Alcohol abuse (1 if yes, 0 if no)
-- Cancer		Integer		Cancer (1 if yes, 0 if no)
-- Diabetes	Integer		Diabetes (1 if yes, 0 if no)
-- Obesity		Integer		Obese (1 if yes, 0 if no)
-- NumeGFR Integer		Number of eGFR measurements in total the patient received
-- Egfr.epi		Integer		eGFR score at a given time
+### Variables
+__Variable__ (*Type*) Description
+- __PatientICN: __ (*Integer*) Unique sequence of numbers representing individual patient
+- __SurveyName: __ (*Character*) Depression test, has to be either PHQ9, PHQ-2, or PHQ-2+I9
+- __RawScore: __ (*Integer*) Score of depression survey taken (For a PHQ-2 and PHQ-2+I9 test must be between 0-6, for PHQ9 between 0-27)
+- __CurrentAge: __ (*Integer*) Age of patient currently
+- __IndexAge: __ (*Integer*) Age of patient when they took their first depression test
+- __SurveyGivenDateTime: __ (*Date*) Date of when the depression test was taken 
+- __Gender: __ (*Character*) Male or female
+- __Race: __ (*Character*) Patient race (White, Black or African American, Asian, American Indian or Alaska Native, Native Hawaiian or Other Pacific Islander, Unknown)
+- __Ethnicity: __ (*Character*) Patient ethnicity (Hispanic or Latino, Not Hispanic or Latino, Unknown)
+- __Alcohol: __ (*Integer*) Alcohol abuse (1 if yes, 0 if no)
+- __Cancer: __ (*Integer*) Cancer (1 if yes, 0 if no)
+- __Diabetes: __ (*Integer*) Diabetes (1 if yes, 0 if no)
+- __Obesity: __ (*Integer*) Obese (1 if yes, 0 if no)
+- __NumeGFR: __ (*Integer*) Number of eGFR measurements in total the patient received
+- __Egfr.epi: __ (*Integer*) eGFR score at a given time
 
 
 `code/00_make_dataset.R`
