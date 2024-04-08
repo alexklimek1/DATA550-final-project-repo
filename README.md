@@ -58,3 +58,8 @@ __Variable__ (*Type*) Description
 `code/04_render_report.R`
 - renders the report, `code/final_report.Rmd` in production mode
 
+## Synchronize Package Repository
+To synchronize the package repository and restore the package environment for this project, run the following command in R or RStudio in the Terminal:
+```bash
+make install
+

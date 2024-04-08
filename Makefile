@@ -4,7 +4,6 @@
 final_report.html: code/04_render_report.R output/data.rds output/table_one.rds output/figure.png
 	Rscript code/04_render_report.R
 
-
 #! add a rule for building the output of 
 #! code/00_make_dataset.R
 
@@ -26,3 +25,7 @@ output/figure.png: code/02_make_figure.R
 .PHONY: clean
 clean:
 	rm -rf output/*
+	
+#! add a rule for installing project packages
+install:
+    Rscript -e 'renv::restore()'
