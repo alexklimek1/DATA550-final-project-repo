@@ -24,7 +24,7 @@ output/figure.png: code/02_make_figure.R
 # PHONY target for removing output files
 .PHONY: clean
 clean:
-	rm -rf output/*
+	rm -rf output/* final_report.html Rplots.pdf README.html
 	
 #! add a rule for installing project packages
 install:

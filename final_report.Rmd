@@ -15,7 +15,7 @@ opts_chunk$set(
 ```
 
 ```{r, load-data}
-here::i_am("code/final_report.Rmd")
+here::i_am("final_report.Rmd")
 data <- readRDS(
   file = here::here("output/data.rds")
 )

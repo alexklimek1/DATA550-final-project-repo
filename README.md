@@ -12,7 +12,7 @@ To generate the final report, follow these steps:
 3. Open RStudio and set the working directory to the root of the cloned repository.
 4. Run the command `make final_report.html` in the terminal or console within RStudio.
 
-The final report will be generated as `final_report.html` in the `code` folder.
+The final report will be generated as `final_report.html`.
 To clean the output after generating the report, run the command `make clean` in the terminal. 
 
 ## Code Description / Content
