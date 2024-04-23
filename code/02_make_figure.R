@@ -3,7 +3,7 @@
 here::i_am("code/02_make_figure.R")
 
 data <- readRDS(
-  file = here::here("output/data.rds")
+  file = here::here("clean_code/data.rds")
 )
 
 library("ggplot2")

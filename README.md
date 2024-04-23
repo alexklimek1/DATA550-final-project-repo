@@ -15,6 +15,15 @@ To generate the final report, follow these steps:
 The final report will be generated as `final_report.html`.
 To clean the output after generating the report, run the command `make clean` in the terminal. 
 
+## Building with Docker
+
+To build the Docker image and generate the report using Docker, follow these steps:
+
+1. Ensure Docker is installed on your system.
+2. Open a terminal and navigate to the root of the cloned repository.
+3. Run the command `make build` to build the Docker image. This process will install all required R packages and prepare the environment. This step may take a few minutes.
+4. Once the image is built, run the command `make run` to execute the Docker container. This will generate the report and save it to the `report` directory on your local machine.
+
 ## Code Description / Content
 
 ### Variables

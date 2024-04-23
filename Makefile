@@ -29,3 +29,14 @@ clean:
 #! add a rule for installing project packages
 install:
     Rscript -e 'renv::restore()'
+    
+#! add a rule for building Docker image
+build:
+	docker build -t final_project .
+
+#! run Docker container to generate the report
+#! mount the local 'report' directory to the container's '/project/output' directory
+run:
+	mkdir -p report
+	docker run -v "$(PWD)/report:/project/output" final_project
+

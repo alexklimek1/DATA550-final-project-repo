@@ -3,7 +3,7 @@
 here::i_am("code/01_make_table.R")
 
 data <- readRDS(
-  file = here::here("output/data.rds")
+  file = here::here("clean_code/data.rds")
 )
 
 library("labelled")

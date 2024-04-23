@@ -42,6 +42,6 @@ data <- as_tibble(patients)
 
 saveRDS(
   data, 
-  file = here::here("output/data.rds")
+  file = here::here("clean_code/data.rds")
 )
 
