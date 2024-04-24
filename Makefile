@@ -38,5 +38,5 @@ build:
 #! mount the local 'report' directory to the container's '/project/output' directory
 run:
 	mkdir -p report
-	docker run -v "$$(PWD)/report:/project/output" final_project
+	docker run -v "$$(pwd)/report:/project/report" final_project
 
