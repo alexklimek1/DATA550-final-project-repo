@@ -2,7 +2,7 @@
 #! add a rule for rendering the combined report
 
 final_report.html: code/04_render_report.R output/data.rds output/table_one.rds output/figure.png
-	Rscript code/04_render_report.R
+	code/04_render_report.R && mv report.html report
 
 #! add a rule for building the output of 
 #! code/00_make_dataset.R
