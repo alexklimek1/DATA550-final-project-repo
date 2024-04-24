@@ -2,13 +2,13 @@
 #! add a rule for rendering the combined report
 
 final_report.html: code/04_render_report.R output/data.rds output/table_one.rds output/figure.png
-	code/04_render_report.R && mv report.html report
+	echo "running final report" && code/04_render_report.R && mv report.html report
 
 #! add a rule for building the output of 
 #! code/00_make_dataset.R
 
 output/data.rds: code/00_make_dataset.R
-	Rscript code/00_make_dataset.R
+	echo "making data set" && Rscript code/00_make_dataset.R
 
 #! add a rule for building the output of 
 #! code/01_make_table.R
@@ -37,6 +37,5 @@ build:
 #! run Docker container to generate the report
 #! mount the local 'report' directory to the container's '/project/output' directory
 run:
-	mkdir -p report
-	docker run -v "$$(pwd)/report:/project/report" final_project
+	docker run -v "$$(pwd)/report:/project/report" alexklimek1/final_project
 

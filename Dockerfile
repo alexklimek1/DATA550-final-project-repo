@@ -32,4 +32,4 @@ RUN apt-get update && apt-get install -y \
 
 RUN R -e "renv::restore()"
 
-CMD make
+CMD make -B
